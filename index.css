@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-decoration: none;
@@ -11,7 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100%;
+    /* gap: 100px; */
+    height: 70px;
     border-bottom: gray solid;
     background-color: rgb(255, 255, 255);
     align-items: center;
@@ -48,10 +49,10 @@
   }
   .navbar .icon {
     align-items: center;
-    margin-right: 8%;
+    margin-right: 0%;
   }
   .navbar .icon i {
-    margin-right: 10%;
+    margin-right: 0%;
     color: rgb(43, 42, 42);
     font-size: 35px;
   }
@@ -176,6 +177,7 @@
     box-sizing: border-box;
     overflow-x: auto;
     scroll-behavior: smooth;
+    scrollbar-width: none;
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 3%;
@@ -312,3 +314,154 @@
     font-size: 230%;
     padding: 2%;
   }/*# sourceMappingURL=index.css.map */
+
+  #check{
+    display: none;
+  }
+
+ .bar{
+  display: none;
+}
+
+  /* Responsive for Phone */
+  @media (max-width: 700px){
+    .hlinks{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 25%;
+      left: 0;
+      width: 100%;
+       background-color: white;
+       text-align: center;
+    }
+    .bar{
+      display: block;
+      /* margin-right: 4%; */
+      font-size: 40px;
+    }
+    #check:checked~ header .navbar .hlinks {
+      display: inline-block ;
+      text-align: center;
+      /* color: white; */
+
+    }
+  }
+
+
+
+  /* Mobile responsive */
+  /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  padding: 0 5%;
+}
+
+.navbar .logo {
+  flex-shrink: 0;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  color: rgb(43, 42, 42);
+  text-transform: uppercase;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 1.5px solid rgb(38, 82, 38);
+  color: rgb(63, 122, 63);
+}
+
+/* Mobile Menu */
+#check {
+  display: none;
+}
+
+.bar {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  .navbar ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      text-align: center;
+      padding: 10px 0;
+  }
+  
+  #check:checked ~ .navbar ul {
+      display: flex;
+  }
+
+  .bar {
+      display: block;
+  }
+
+  .hero .starbuck h5, 
+  .hero .starbuck .know {
+      font-size: 18px;
+      text-align: center;
+      margin: auto;
+  }
+
+  .hero .curation .images {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .hero .container1 {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .hero .container1 .card {
+      width: 90%;
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+  }
+  
+  .hero .container1 .card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .hero .learn-more .content img {
+      height: 50vh;
+  }
+}
