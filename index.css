@@ -313,7 +313,10 @@
     color: white;
     font-size: 230%;
     padding: 2%;
-  }/*# sourceMappingURL=index.css.map */
+  }
+  
+  
+ /* # sourceMappingURL=index.css.map  */
 
   #check{
     display: none;
@@ -321,7 +324,7 @@
 
  .bar{
   display: none;
-}
+} 
 
   /* Responsive for Phone */
   @media (max-width: 700px){
@@ -340,7 +343,7 @@
       /* margin-right: 4%; */
       font-size: 40px;
     }
-    #check:checked~ header .navbar .hlinks {
+    #check:checked ~ header .navbar .hlinks {
       display: inline-block ;
       text-align: center;
       /* color: white; */
